@@ -13,7 +13,7 @@
   /* ========================== CONFIG ========================== */
   const $body = document.body;
   const STORE_NAME = ($body.dataset.storeName || "Taquería Los Changos").trim();
-  const WPP_NUMBER = ($body.dataset.wppNumber || "529999999999").replace(/\D+/g, "");
+  const WPP_NUMBER = ($body.dataset.wppNumber || "529994552650").replace(/\D+/g, "");
   const CURRENCY = "MXN";
 
   /* ======================== SELECTORES ======================== */
@@ -242,3 +242,4 @@
   const savedName = localStorage.getItem(NAME_KEY);
   if (savedName && $clientName) $clientName.value = savedName;
 })();
+
