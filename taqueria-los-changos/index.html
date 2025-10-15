@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+  <!-- =========================================================
+       Taquería Los Changos — index.html
+       Estructura lista para producción (Hostinger)
+       Autor: Francisco Corona (Paco) · 2025-10-13
+       ========================================================= -->
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Taquería Los Changos — Menú y Pedidos por WhatsApp</title>
+  <meta name="description" content="Pide tus tacos por WhatsApp. Rápido, fácil y sabroso. Menú actualizado con precios y promos.">
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https://tusitio.com/">
+
+  <!-- Iconos -->
+  <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="assets/images/placeholder.jpg">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Taquería Los Changos — Menú">
+  <meta property="og:description" content="Pide tus tacos por WhatsApp. Rápido, fácil y sabroso.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="assets/images/placeholder.jpg">
+  <meta property="og:url" content="https://tusitio.com/">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Taquería Los Changos — Menú">
+  <meta name="twitter:description" content="Pide tus tacos por WhatsApp. Rápido, fácil y sabroso.">
+  <meta name="twitter:image" content="assets/images/placeholder.jpg">
+
+  <!-- Performance -->
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+
+  <!-- Bootstrap 5 (CDN) -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+  <!-- Tu CSS -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Color del navegador móvil -->
+  <meta name="theme-color" content="#111827">
+</head>
+<body class="page" data-wpp-number="529992922897" data-store-name="Taquería Los Changos">
+  <!-- =========================================================
+       CONFIG (leer el valor desde script.js si lo prefieres)
+       - data-wpp-number en <body> = número de WhatsApp (E.164)
+       - data-store-name           = nombre comercial
+       ========================================================= -->
+
+  <noscript>
+    <div class="alert alert-warning text-center mb-0">
+      Para hacer pedidos por WhatsApp desde el carrito, habilita JavaScript.
+    </div>
+  </noscript>
+
+  <!-- ============================ HEADER ============================ -->
+  <header class="site-header border-bottom">
+    <nav class="navbar navbar-expand-lg bg-white" aria-label="Navegación principal">
+      <div class="container">
+        <a class="navbar-brand d-flex align-items-center gap-2" href="#" aria-label="Ir al inicio">
+          <img src="https://scontent.fmex32-1.fna.fbcdn.net/v/t39.30808-6/294573774_547699633812083_3820432282312687915_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=jin-LKivrjkQ7kNvwFS_gSy&_nc_oc=AdmGb9a7sZyc7hN_s5Io9QKYuH7grIX2Qecx39mKzZwtMws5O0SNl7FZHudnUIhREBc&_nc_zt=23&_nc_ht=scontent.fmex32-1.fna&_nc_gid=uy2yAYzSVa3mr3xSxsm3Lw&oh=00_Afdk_VG_bYhWr6XRBhxombIt6gqWE2IMerzaPR24-bTDgw&oe=68F3142A" alt="Logo Taquería Los Changos" width="36" height="36"
+               class="rounded" loading="lazy" decoding="async">
+          <span class="fw-bold">Taquería Los Changos</span>
+        </a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Mostrar menú">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="mainNav">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item"><a class="nav-link active" href="#menu">Menú</a></li>
+            <li class="nav-item"><a class="nav-link" href="#como-funciona">Cómo funciona</a></li>
+            <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <section class="bg-light py-4">
+      <div class="container">
+        <div class="row g-3 align-items-center">
+          <!-- Búsqueda -->
+          <div class="col-12 col-lg-6">
+            <label for="searchInput" class="form-label fw-semibold mb-1">Busca tu antojo</label>
+            <div class="input-group">
+              <span class="input-group-text" id="searchIcon" aria-hidden="true">🔎</span>
+              <input id="searchInput" type="search" class="form-control" placeholder="Taco, gringa, pastor..."
+                     aria-describedby="searchIcon" autocomplete="off">
+            </div>
+          </div>
+
+          <!-- Filtros por categoría -->
+            <div class="d-flex flex-wrap gap-2" role="group" aria-label="Filtros de categoría">
+              <button class="btn btn-outline-dark btn-filter active" data-filter="all" type="button">Todo</button>
+              <button class="btn btn-outline-dark btn-filter" data-filter="tacos" type="button">Tacos</button>
+              <button class="btn btn-outline-dark btn-filter" data-filter="tortas" type="button">Tortas</button>
+              <button class="btn btn-outline-dark btn-filter" data-filter="antojitos" type="button">Antojitos</button>
+              <button class="btn btn-outline-dark btn-filter" data-filter="bebidas" type="button">Bebidas</button>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+  </header>
+
+  <!-- ============================ MAIN ============================ -->
+  <main id="menu" class="site-main py-5">
+    <div class="container">
+      <!-- Estado vacío (se muestra cuando no hay resultados) -->
+      <div id="emptyState" class="text-center text-muted d-none" role="status" aria-live="polite">
+        No encontramos platillos con ese filtro. Prueba otra palabra o categoría.
+      </div>
+
+<div id="productGrid" class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 g-4" aria-live="polite">
+
+  <!-- Gordita · Antojitos · $39 -->
+  <div class="col product-card" data-category="antojitos">
+    <div class="card h-100 shadow-sm">
+      <img src="https://taqueria-changos.odoo.com/web/image/product.template/8/image_128?unique=1757641823000" class="card-img-top"
+           alt="Gordita" loading="lazy" decoding="async" width="600" height="400">
+      <div class="card-body d-flex flex-column">
+        <h3 class="h5 card-title mb-1">Gordita</h3>
+        <p class="card-text text-muted flex-grow-1">Rellena y doradita. Hecha al momento.</p>
+        <div class="d-flex align-items-center justify-content-between">
+          <span class="price fw-bold" data-price="39">$39</span>
+          <button class="btn btn-primary btn-add"
+                  data-id="gordita" data-name="Gordita" data-price="39" type="button">
+            Agregar
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Jugos Naturales · Bebidas · $40 -->
+  <div class="col product-card" data-category="bebidas">
+    <div class="card h-100 shadow-sm">
+      <img src="https://taqueria-changos.odoo.com/web/image/product.template/10/image_128?unique=1757641662000" class="card-img-top"
+           alt="Jugos Naturales" loading="lazy" decoding="async" width="600" height="400">
+      <div class="card-body d-flex flex-column">
+        <h3 class="h5 card-title mb-1">Jugos Naturales</h3>
+        <p class="card-text text-muted flex-grow-1">Naranja, zanahoria o mixto. Recién hechos.</p>
+        <div class="d-flex align-items-center justify-content-between">
+          <span class="price fw-bold" data-price="40">$40</span>
+          <button class="btn btn-primary btn-add"
+                  data-id="jugos-naturales" data-name="Jugos Naturales" data-price="40" type="button">
+            Agregar
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Refresco Embotellado · Bebidas · $30 -->
+  <div class="col product-card" data-category="bebidas">
+    <div class="card h-100 shadow-sm">
+      <img src="https://taqueria-changos.odoo.com/web/image/product.template/9/image_128?unique=1757641491000" class="card-img-top"
+           alt="Refresco Embotellado" loading="lazy" decoding="async" width="600" height="400">
+      <div class="card-body d-flex flex-column">
+        <h3 class="h5 card-title mb-1">Refresco Embotellado</h3>
+        <p class="card-text text-muted flex-grow-1">Variedad de sabores bien fríos.</p>
+        <div class="d-flex align-items-center justify-content-between">
+          <span class="price fw-bold" data-price="30">$30</span>
+          <button class="btn btn-primary btn-add"
+                  data-id="refresco-embotellado" data-name="Refresco Embotellado" data-price="30" type="button">
+            Agregar
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Taco de Asado · Tacos · $27 -->
+  <div class="col product-card" data-category="tacos">
+    <div class="card h-100 shadow-sm">
+      <img src="https://taqueria-changos.odoo.com/web/image/product.template/6/image_128?unique=1757641786000" class="card-img-top"
+           alt="Taco de Asado" loading="lazy" decoding="async" width="600" height="400">
+      <div class="card-body d-flex flex-column">
+        <h3 class="h5 card-title mb-1">Taco de Asado</h3>
+        <p class="card-text text-muted flex-grow-1">Carne asada, cilantro y cebolla.</p>
+        <div class="d-flex align-items-center justify-content-between">
+          <span class="price fw-bold" data-price="27">$27</span>
+          <button class="btn btn-primary btn-add"
+                  data-id="taco-asado" data-name="Taco de Asado" data-price="27" type="button">
+            Agregar
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Torta de Asado · Tortas · $39 -->
+  <div class="col product-card" data-category="tortas">
+    <div class="card h-100 shadow-sm">
+      <img src="https://taqueria-changos.odoo.com/web/image/product.template/7/image_128?unique=1757641812000" class="card-img-top"
+           alt="Torta de Asado" loading="lazy" decoding="async" width="600" height="400">
+      <div class="card-body d-flex flex-column">
+        <h3 class="h5 card-title mb-1">Torta de Asado</h3>
+        <p class="card-text text-muted flex-grow-1">Pan crujiente, carne asada y salsas.</p>
+        <div class="d-flex align-items-center justify-content-between">
+          <span class="price fw-bold" data-price="39">$39</span>
+          <button class="btn btn-primary btn-add"
+                  data-id="torta-asado" data-name="Torta de Asado" data-price="39" type="button">
+            Agregar
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+  </main>
+
+  <!-- ===================== CÓMO FUNCIONA ====================== -->
+  <section id="como-funciona" class="py-5 bg-light">
+    <div class="container">
+      <h2 class="h4 mb-3">¿Cómo funciona?</h2>
+      <div class="row g-4">
+        <div class="col-12 col-md-4">
+          <div class="d-flex align-items-start gap-3">
+            <div class="fs-3" aria-hidden="true">🛒</div>
+            <div><strong>Elige</strong><br>Explora el menú y arma tu pedido.</div>
+          </div>
+        </div>
+        <div class="col-12 col-md-4">
+          <div class="d-flex align-items-start gap-3">
+            <div class="fs-3" aria-hidden="true">➕</div>
+            <div><strong>Agrega</strong><br>Usa el carrito para sumar o quitar productos.</div>
+          </div>
+        </div>
+        <div class="col-12 col-md-4">
+          <div class="d-flex align-items-start gap-3">
+            <div class="fs-3" aria-hidden="true">📲</div>
+            <div><strong>Envía</strong><br>Manda tu pedido por WhatsApp. ¡Listo!</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================ FOOTER ============================ -->
+  <footer id="contacto" class="site-footer py-5 border-top">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-12 col-lg-6">
+          <h2 class="h5">Taquería Los Changos</h2>
+          <p class="mb-1">Calle 00 #000, Mérida, Yucatán</p>
+          <p class="mb-1">
+            <a href="https://maps.google.com" target="_blank" rel="noopener">Ver en Google Maps</a>
+          </p>
+          <p class="mb-0">Pagos: Efectivo · Tarjeta · Transferencia</p>
+        </div>
+        <div class="col-12 col-lg-6">
+          <h2 class="h6">Horarios (Lunes a Domingo)</h2>
+          <ul class="list-unstyled mb-3">
+            <li>Lunes a Jueves: 6:00 pm — 12:00 am</li>
+            <li>Viernes y Sábado: 6:00 pm — 1:30 am</li>
+            <li>Domingo: 6:00 pm — 12:00 am</li>
+          </ul>
+          <small class="text-muted">Precios en MXN. Sujetos a cambio sin previo aviso. Pregunta por alérgenos.</small>
+        </div>
+      </div>
+      <div class="pt-3 text-center text-muted small">© <span id="year"></span> Taquería Los Changos · Mérida, MX</div>
+    </div>
+  </footer>
+
+  <!-- =================== OFFCANVAS CARRITO ==================== -->
+  <div class="offcanvas offcanvas-end" tabindex="-1" id="cartOffcanvas" aria-labelledby="cartLabel">
+    <div class="offcanvas-header">
+      <h2 class="offcanvas-title h5" id="cartLabel">Tu pedido</h2>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Cerrar"></button>
+    </div>
+    <div class="offcanvas-body d-flex flex-column">
+      <div id="cartItems" class="list-group mb-3" aria-live="polite" aria-relevant="all">
+        <!-- JS inyecta ítems aquí -->
+      </div>
+
+      <div class="mt-auto">
+        <div class="d-flex justify-content-between align-items-center mb-2">
+          <span class="fw-semibold">Total</span>
+          <span id="cartTotal" class="fw-bold">$0</span>
+        </div>
+
+        <div class="mb-2">
+          <label for="clientName" class="form-label">Tu nombre *</label>
+          <div class="invalid-feedback d-none" id="nameError">
+            Por favor escribe tu nombre antes de enviar el pedido.
+          </div>
+
+          <input id="clientName" class="form-control" type="text" placeholder="Ej. Juan Pérez" required>
+        </div>
+
+        <!-- Notas / modo entrega -->
+        <div class="mb-2">
+          <label for="orderNotes" class="form-label">Notas del pedido (opcional)</label>
+          <textarea id="orderNotes" class="form-control" rows="2" placeholder="Sin cebolla, extra salsa, etc."></textarea>
+        </div>
+
+        <div class="mb-3">
+          <label for="orderMode" class="form-label">Modo de entrega</label>
+          <select id="orderMode" class="form-select" aria-label="Selecciona modo de entrega">
+            <option value="pickup" selected>Recoger en sucursal</option>
+            <option value="delivery">Entrega a domicilio</option>
+          </select>
+        </div>
+
+        <div class="d-grid gap-2">
+          <button id="btnWpp" class="btn btn-success btn-lg" type="button">
+            Enviar pedido por WhatsApp
+          </button>
+          <button id="btnClear" class="btn btn-outline-secondary" type="button">
+            Vaciar carrito
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= BOTÓN FLOTANTE CARRITO ================= -->
+  <button id="fabCart" class="btn btn-dark btn-lg position-fixed bottom-0 end-0 m-3 rounded-pill d-flex align-items-center gap-2"
+          type="button" data-bs-toggle="offcanvas" data-bs-target="#cartOffcanvas" aria-controls="cartOffcanvas"
+          aria-label="Abrir carrito">
+    <span aria-hidden="true">🧺</span>
+    <span>Carrito</span>
+    <span id="cartCount" class="badge text-bg-light" aria-live="polite">0</span>
+  </button>
+
+  <!-- Bootstrap Bundle + Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+          integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+          crossorigin="anonymous"></script>
+
+  <!-- Tu JS -->
+  <script src="script.js" defer></script>
+
+  <!-- Utilidad mínima para año dinámico (evita parpadeo) -->
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
